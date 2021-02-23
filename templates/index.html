@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <title>IMDB Search Engine</title>
+</head>
+<body>
+    <main>
+        <div class="flex-container">
+            <div>
+                <a  href="{{ url_for('voice') }}" class="voice">
+                    
+                    Voice method
+                </a>
+                <div class="icon"><i class="fas fa-microphone"></i></div>
+             
+            </div>
+            <div>
+                <a href="/search" class="keybord">
+                   
+                    Keybord method
+                </a>
+                <div class="icon"><i class="fas fa-keyboard"></i></div>
+                
+            </div>
+               
+
+        </div>
+    </main>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.voice,
+.keybord {
+    display: flex;
+    align-self: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1565c0;
+    transition: .5s;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+    /* width: 50%; */
+
+    /* border: 1px solid #e3e3e3; */
+    /* border-radius: 20px; */
+    /* background-color:gray; */
+    transition: .5s;
+    color: #1565c0;
+}
+.icon:hover {
+    /* background-color:#e3e3e3; */
+    /* border-radius: 5px; */
+    /* box-shadow: 1px 1px 1px rgba(0,0,0,0.25); */
+    color: gray;
+    font-size: 28px;
+}
+.voice:hover,
+.keybord:hover {
+    color: gray;
+    font-size: 28px; 
+}
+    </style>
+</body>
+</html>
